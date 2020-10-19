@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>let's play Anno 1800 Release Campaign Gameplay</title>
+  <link rel="stylesheet" href="code/css/bootstrap.min.css">
+  <link rel="stylesheet" href="code/css/plyr.css">
+  <link rel="stylesheet" href="code/css/katex.min.css">
+  <link rel="stylesheet" href="code/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="code/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="code/img/anno.png" />
+</head>
+
+<body>
+  <div class="">
+
+    <div id="">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+
+                <h1 style="">Resources</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div>
+  <img src="img/anno1800-1.jpg" alt="Resources" class="img-fluid">
+  <p><strong>Locale:</strong> en-us</p>
+  <p><p>I provide a series of episodes on my youtube channel CtechGaming for ANNO 1800.Anno 1800 is a city-building real-time strategy video game, developed by Blue Byte and published by Ubisoft</p></p>
+</div>
+
+<div>
+  <h3>Content</h3>
+
+      <div>
+          <h4><strong></strong> Anno 1800 Multiplayer gameplay</h4>
+          <p><p>Anno 1800 co-op allows players to share the responsibilities of raising and managing an industrial empire with up to four people per team, with four team slots.</p></p>
+          <ul>
+             <h4></strong>Goods</h4>
+         <img src="img/anno1800-7.jpg" alt="let's play Anno 1800 Release Campaign Gameplay" class="img-fluid">
+
+   
+          </ul>
+        </details>
+      </li>
+
+       </div>
+
+      <div>
+          <h5><strong></strong> Anno 1800 Multiplayer gameplay youtube playlist embed</h5>
+          <p><p>Exploring through the best industrial city building game </p></p>
+          <ul>
+      <li>
+        <strong>Set 01:</strong> ANNO1800-PlayList
+        <ul>
+      </div>
+
+         <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLz1VmGw2_8S6TqKo_bwdaktfiDHRQFY96" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+          <ul>
+      <li>
+        <strong>Set 02:</strong> ANNO1800 best Soundtrack ever
+		<a href="https://www.youtube.com/watch?v=_hb0L2t3P3Y&list=PLz5K4OoYuy8RlaKf3ifg48-XwnbFqw5"><strong></strong>Anno 1800 (Full Game Soundtrack)</a>
+        <ul>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/legendknight/ANNO1800-BLOG#readme" target="_blank">ANNO1800-BLOG</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="code/js/jquery-3.3.1.min.js"></script>
+  <script src="code/js/plyr.polyfilled.min.js"></script>
+  <script src="code/js/bootstrap.min.js"></script>
+  <script src="code/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="code/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
